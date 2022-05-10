@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Home from "./Components/Home";
+// import Landing from "./Components/Landing";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Toaster } from 'react-hot-toast';
+import styled from 'styled-components'
+const Container = styled.div`
+    width: 100%;
+    height: auto;
+    border: 11px solid #000;
+`
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="App">
+      <Router>
+        <Toaster/>
+        <Routes>
+          {/* <Route path="/" element={<Landing/>}/> */}
+          <Route path="/home" element={<Home/>}/>
+        </Routes>
+      </Router>
+    </Container>
   );
 }
 

@@ -1,13 +1,73 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600;700;800;900&family=Bellefair&family=Cormorant+Unicase:wght@700&family=Gugi&family=Koulen&family=Oxygen:wght@300;400;700&family=PT+Serif:wght@400;700&family=Radio+Canada:wght@300;500;600;700&family=Raleway:wght@300;400;500;600;700;800;900&family=Roboto+Condensed&family=Roboto:wght@400;500;700;900&family=Rubik+Wet+Paint&display=swap');
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.mod{
+  height: 70vh;
+}
+.carousel-container .carousel-slide{
+  position: relative;
+  height: 100vh; background-image: linear-gradient(to right, #340520, #510437, #6f0152, #8c0071, #a80193, #a8079b, #a80da3, #a714ab, #8e1197, #750e82, #5f096e, #49055a);
+  position: relative;
+}
+.caption{
+  top: 30%;
+  border-radius: 5px;
+  height: 50vh;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.caption h3{
+  font-size: 5vw;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'PT Serif', serif;
+  font-weight: 800;
+}
+.caption p{
+  text-transform: uppercase;
+  font-size: 2vw;
+  font-family: 'Bellefair', serif;
+  color: white;
+}
+.caption a{
+  padding: 2.5% 5%;
+  font-size: 2vw;
+  font-family: 'PT Serif', serif;
+  border: none;
+  background: white;
+  color: #a80193;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.5s linear;
+  z-index: 60;
+}
+.caption a:hover{
+  background: #a80193;
+  color: white;
+  border: 1px solid #fff;
+}
+.carousel-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-slide:after {
+  content:'';
+  position:absolute;
+  left:0; top:0;
+  width:100%; height:100%;
+  display:inline-block;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
